@@ -55,13 +55,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Toggle menu when clicking hamburger button
     menuToggle.addEventListener('click', function(e) {
       e.stopPropagation(); // Prevent event from bubbling up
-      mobileMenu.classList.toggle('hidden');
+      const isExpanded = mobileMenu.classList.toggle('hidden');
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
     });
     
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(e) {
       if (!mobileMenu.contains(e.target) && e.target !== menuToggle) {
         mobileMenu.classList.add('hidden');
+        menuToggle.setAttribute('aria-expanded', 'false');
       }
     });
 
