@@ -1,3 +1,7 @@
 name = "site-worker"
-main = "./index.html"
-compatibility_date = "2025-03-11"
+type = "javascript"
+workers_dev = true
+
+[site]
+bucket = "./"
+entry-point = "workers-site"
