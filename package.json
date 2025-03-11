@@ -17,8 +17,19 @@
   "author": "Vector Insight",
   "license": "MIT",
   "devDependencies": {
-    "tailwindcss": "^3.3.0",
     "autoprefixer": "^10.4.0",
-    "postcss": "^8.4.0"
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edivanteixeira/vector-site.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edivanteixeira/vector-site/issues"
+  },
+  "homepage": "https://github.com/edivanteixeira/vector-site#readme",
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.3.4"
   }
 }
