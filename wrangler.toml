@@ -1,5 +1,6 @@
 name = "site-worker"
 main = "workers-site/index.js"
+compatibility_date = "2025-03-11"
 
 [site]
 bucket = "./"
