@@ -1,7 +1,5 @@
 name = "site-worker"
-type = "javascript"
-workers_dev = true
+main = "workers-site/index.js"
 
 [site]
 bucket = "./"
-entry-point = "workers-site"
