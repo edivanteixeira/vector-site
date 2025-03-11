@@ -52,19 +52,29 @@ document.addEventListener('DOMContentLoaded', function() {
   const mobileMenu = document.getElementById('mobileMenu');
   
   if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener('click', function() {
+    // Toggle menu when clicking hamburger button
+    menuToggle.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevent event from bubbling up
       mobileMenu.classList.toggle('hidden');
     });
-  }
-  
-  // Close mobile menu when clicking outside
-  document.addEventListener('click', function(e) {
-    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
       if (!mobileMenu.contains(e.target) && e.target !== menuToggle) {
         mobileMenu.classList.add('hidden');
       }
+    });
+
+    // Close menu when clicking on links
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    if (mobileLinks) {
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
     }
-  });
+  }
   
   // Initialize animations if AOS is available
   if (typeof AOS !== 'undefined') {
