@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.vectorinsight.io/sitemap.xml

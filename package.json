@@ -1,0 +1,24 @@
+{
+  "name": "vector-insight-website",
+  "version": "1.0.0",
+  "description": "Vector Insight Company Website",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --watch"
+  },
+  "keywords": [
+    "vector",
+    "insight",
+    "modernization",
+    "documentation",
+    "systems"
+  ],
+  "author": "Vector Insight",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0"
+  }
+}

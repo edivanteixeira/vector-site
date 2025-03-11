@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Vector Insight | Modernização e Documentação de Sistemas</title>
+    <meta name="description" content="Consultoria especializada em modernização de sistemas, documentação técnica e desenvolvimento de soluções para empresas de médio e grande porte.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Vector Insight">
+    <meta name="keywords" content="documentação de sistemas, modernização de sistemas, análise de sistemas, desenvolvimento de sistemas corporativos, Vector Insight">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.vectorinsight.io/">
+    <meta property="og:title" content="Vector Insight | Modernização e Documentação de Sistemas">
+    <meta property="og:description" content="Consultoria especializada em modernização de sistemas, documentação técnica e desenvolvimento de soluções para empresas de médio e grande porte.">
+    <meta property="og:image" content="https://www.vectorinsight.io/assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.vectorinsight.io/">
+    <meta property="twitter:title" content="Vector Insight | Modernização e Documentação de Sistemas">
+    <meta property="twitter:description" content="Consultoria especializada em modernização de sistemas, documentação técnica e desenvolvimento de soluções para empresas de médio e grande porte.">
+    <meta property="twitter:image" content="https://www.vectorinsight.io/assets/images/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.vectorinsight.io/">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="assets/css/tailwind.css" as="style">
+    <link rel="preload" href="assets/js/main.js" as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="font" crossorigin="anonymous">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    
+    <style>
+      /* Custom Styles */
+      :root {
+        --color-primary: #0F52BA;
+        --color-primary-light: #3B7DD8;
+        --color-primary-dark: #0A3A8C;
+        --color-secondary: #2D3748;
+        --color-secondary-light: #4A5568;
+        --color-secondary-dark: #1A202C;
+        --color-accent: #4FD1C5;
+        --color-accent-light: #76E4DA;
+        --color-accent-dark: #38B2A0;
+        --color-light: #F7FAFC;
+        --color-light-dark: #EDF2F7;
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        font-family: 'Inter', sans-serif;
+        color: var(--color-secondary);
+        line-height: 1.5;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        color: var(--color-secondary-dark);
+        line-height: 1.2;
+      }
+      
+      .text-primary { color: var(--color-primary); }
+      .bg-primary { background-color: var(--color-primary); }
+      .bg-primary\/10 { background-color: rgba(15, 82, 186, 0.1); }
+      .text-accent { color: var(--color-accent); }
+      .bg-accent { background-color: var(--color-accent); }
+      .bg-accent\/10 { background-color: rgba(79, 209, 197, 0.1); }
+      .text-secondary { color: var(--color-secondary); }
+      .text-secondary-dark { color: var(--color-secondary-dark); }
+      .bg-secondary-dark { background-color: var(--color-secondary-dark); }
+      .bg-light { background-color: var(--color-light); }
+      
+      .section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+      
+      @media (min-width: 768px) {
+        .section {
+          padding-top: 6rem;
+          padding-bottom: 6rem;
+        }
+      }
+      
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 0.375rem;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary {
+        background-color: var(--color-primary);
+        color: white;
+      }
+      
+      .btn-primary:hover {
+        background-color: var(--color-primary-dark);
+      }
+      
+      .btn-accent {
+        background-color: var(--color-accent);
+        color: white;
+      }
+      
+      .btn-accent:hover {
+        background-color: var(--color-accent-dark);
+      }
+      
+      .btn-outlined {
+        border: 2px solid var(--color-primary);
+        color: var(--color-primary);
+      }
+      
+      .btn-outlined:hover {
+        background-color: var(--color-primary);
+        color: white;
+      }
+      
+      .service-card {
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        background-color: white;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        transition: box-shadow 0.3s;
+      }
+      
+      .service-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .section-heading {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+    </style>
+    
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Vector Insight",
+      "url": "https://www.vectorinsight.io",
+      "logo": "https://www.vectorinsight.io/assets/images/logo.svg",
+      "description": "Consultoria especializada em modernização de sistemas, documentação técnica e desenvolvimento de soluções para empresas de médio e grande porte.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "contato@vectorinsight.io"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/vector-insight/",
+        "https://twitter.com/vectorinsight"
+      ]
+    }
+    </script>
+</head>
+
+<body class="antialiased bg-light">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-primary">
+                        <span class="flex items-center">
+                            <!-- Placeholder for logo -->
+                            <span class="text-primary mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </span>
+                            Vector<span class="text-accent font-light">Insight</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#sobre" class="text-secondary-dark hover:text-primary font-medium transition-colors">Sobre Nós</a>
+                    <a href="#servicos" class="text-secondary-dark hover:text-primary font-medium transition-colors">Serviços</a>
+                    <a href="#diferenciais" class="text-secondary-dark hover:text-primary font-medium transition-colors">Diferenciais</a>
+                    <a href="#contato" class="px-4 py-2 bg-blue-700 text-white font-semibold rounded-md shadow-md hover:bg-blue-800 transition-all duration-300 transform hover:scale-105">Agende uma Reunião</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menuToggle" class="text-secondary-dark focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="md:hidden hidden mt-3 pb-4">
+                <nav class="flex flex-col space-y-3">
+                    <a href="#sobre" class="text-secondary-dark hover:text-primary font-medium transition-colors">Sobre Nós</a>
+                    <a href="#servicos" class="text-secondary-dark hover:text-primary font-medium transition-colors">Serviços</a>
+                    <a href="#diferenciais" class="text-secondary-dark hover:text-primary font-medium transition-colors">Diferenciais</a>
+                    <a href="#contato" class="px-4 py-2 bg-blue-700 text-white font-semibold rounded-md shadow-md hover:bg-blue-800 transition-all duration-300 text-center block">Agende uma Reunião</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="pt-32 pb-20 bg-gradient-to-br from-light to-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-dark mb-4">
+                            Modernize e documente seus sistemas com especialistas.
+                        </h1>
+                        <p class="text-xl text-secondary mb-8">
+                            Na Vector Insight, unimos inovação e experiência para elevar a performance, a segurança e a competitividade dos seus sistemas.
+                        </p>
+                        <a href="#contato" class="px-6 py-3 bg-blue-700 text-white font-semibold rounded-md shadow-md hover:bg-blue-800 transition-all duration-300 transform hover:scale-105 inline-flex items-center">
+                            Agende uma Reunião
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="md:w-1/2" data-aos="fade-left">
+                        <div class="relative">
+                            <!-- Placeholder for hero image -->
+                            <svg class="w-full h-auto" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#0F52BA;stop-opacity:0.2" />
+                                        <stop offset="100%" style="stop-color:#4FD1C5;stop-opacity:0.3" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="600" height="400" rx="20" fill="url(#grad1)" />
+                                <path d="M150,200 L250,100 L350,200 L450,100" stroke="#0F52BA" stroke-width="8" fill="none" stroke-linecap="round" />
+                                <path d="M150,250 L250,150 L350,250 L450,150" stroke="#4FD1C5" stroke-width="8" fill="none" stroke-linecap="round" />
+                                <path d="M150,300 L250,200 L350,300 L450,200" stroke="#0F52BA" stroke-width="8" fill="none" stroke-linecap="round" />
+                                <circle cx="150" cy="200" r="10" fill="#0F52BA" />
+                                <circle cx="250" cy="100" r="10" fill="#0F52BA" />
+                                <circle cx="350" cy="200" r="10" fill="#0F52BA" />
+                                <circle cx="450" cy="100" r="10" fill="#0F52BA" />
+                                <circle cx="150" cy="250" r="10" fill="#4FD1C5" />
+                                <circle cx="250" cy="150" r="10" fill="#4FD1C5" />
+                                <circle cx="350" cy="250" r="10" fill="#4FD1C5" />
+                                <circle cx="450" cy="150" r="10" fill="#4FD1C5" />
+                                <circle cx="150" cy="300" r="10" fill="#0F52BA" />
+                                <circle cx="250" cy="200" r="10" fill="#0F52BA" />
+                                <circle cx="350" cy="300" r="10" fill="#0F52BA" />
+                                <circle cx="450" cy="200" r="10" fill="#0F52BA" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="sobre" class="section bg-white">
+            <div class="container mx-auto px-4">
+                <div class="section-heading" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-secondary-dark mb-4">Quem Somos</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-8"></div>
+                </div>
+                <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-lg text-center">
+                        A <strong class="text-primary">Vector Insight</strong> é uma consultoria especializada em <strong>modernização de sistemas</strong>, <strong>documentação técnica</strong> e <strong>desenvolvimento de soluções</strong> inovadoras. Com uma equipe multidisciplinar e vasta experiência em projetos corporativos, oferecemos suporte completo para que sua empresa alcance <strong>segurança, escalabilidade e eficiência</strong> em suas aplicações.
+                    </p>
+                    <p class="text-lg text-center">
+                        Nossa abordagem é pautada pela <strong>profissionalismo</strong>, <strong>modernidade</strong>, <strong>confiança</strong> e <strong>inovação</strong>, garantindo entregas de alto valor agregado para grandes e médias empresas que precisam evoluir de forma ágil em um mercado cada vez mais competitivo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicos" class="section bg-light">
+            <div class="container mx-auto px-4">
+                <div class="section-heading" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-secondary-dark mb-4">Nossos Serviços</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-8"></div>
+                    <p class="text-lg text-center max-w-4xl mx-auto mb-12">
+                        Soluções completas para modernização, documentação e desenvolvimento de sistemas corporativos.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- VectorDoc -->
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-4 rounded-lg mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary mb-2">VectorDoc</h3>
+                                <h4 class="text-lg font-medium text-secondary-dark mb-3">Documentação de Sistemas</h4>
+                                <ul class="space-y-2 text-secondary">
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        Mapeamento completo de funcionalidades, fluxos e integrações.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        Padronização e organização de artefatos técnicos.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        Facilita manutenção, treinamentos e onboarding de equipes.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- VectorCheck -->
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-4 rounded-lg mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary mb-2">VectorCheck</h3>
+                                <h4 class="text-lg font-medium text-secondary-dark mb-3">Relatórios de Análise</h4>
+                                <ul class="space-y-2 text-secondary">
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        Avalia a qualidade de código, identificando pontos críticos.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        Verifica segurança e conformidade (LGPD, normas internas etc.).
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        Analisa performance e manutenibilidade em curto e longo prazo.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        Oferece recomendações de melhoria e mitigação de riscos.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- VectorShift -->
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-4 rounded-lg mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary mb-2">VectorShift</h3>
+                                <h4 class="text-lg font-medium text-secondary-dark mb-3">Modernização de Sistemas</h4>
+                                <ul class="space-y-2 text-secondary">
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        Análise de legado e identificação de oportunidades de atualização.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        Migração para tecnologias mais modernas e escaláveis.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        Planejamento estratégico para evitar downtime e garantir continuidade.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        Redução de custos e maior competitividade no mercado.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- VectorDev -->
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-4 rounded-lg mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary mb-2">VectorDev</h3>
+                                <h4 class="text-lg font-medium text-secondary-dark mb-3">Desenvolvimento de Sistemas</h4>
+                                <ul class="space-y-2 text-secondary">
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        Projetos customizados desde o planejamento até a implementação.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        Metodologias ágeis para entregas rápidas e eficientes.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        Foco em escalabilidade, segurança e alta performance.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        Integração com sistemas legados ou plataformas de mercado.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Differentials and Benefits Section -->
+        <section id="diferenciais" class="section bg-white">
+            <div class="container mx-auto px-4">
+                <div class="section-heading" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-secondary-dark mb-4">Diferenciais e Benefícios</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-8"></div>
+                </div>
+                
+                <div class="max-w-5xl mx-auto">
+                    <p class="text-lg text-center mb-12" data-aos="fade-up" data-aos-delay="100">
+                        Na <strong class="text-primary">Vector Insight</strong>, nossos serviços são concebidos para oferecer:
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                        <!-- Professionalism -->
+                        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-secondary-dark">Profissionalismo</h3>
+                            </div>
+                            <p class="text-secondary">
+                                Equipe experiente, processos padronizados e transparência em todas as etapas.
+                            </p>
+                        </div>
+                        
+                        <!-- Modernity -->
+                        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-secondary-dark">Modernidade</h3>
+                            </div>
+                            <p class="text-secondary">
+                                Adoção de tecnologias de ponta e metodologias inovadoras.
+                            </p>
+                        </div>
+                        
+                        <!-- Trust -->
+                        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-secondary-dark">Confiança</h3>
+                            </div>
+                            <p class="text-secondary">
+                                Relatórios claros, acompanhamento contínuo e foco em resultados tangíveis.
+                            </p>
+                        </div>
+                        
+                        <!-- Innovation -->
+                        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="400">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-secondary-dark">Inovação</h3>
+                            </div>
+                            <p class="text-secondary">
+                                Soluções escaláveis, sustentáveis e alinhadas às tendências do mercado.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-2xl font-bold text-secondary-dark text-center mb-6">Principais Ganhos para Sua Empresa</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="flex flex-col items-center text-center p-4">
+                                <div class="bg-accent/10 p-4 rounded-full mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <h4 class="text-lg font-bold text-secondary-dark mb-2">Redução de custos</h4>
+                                <p class="text-secondary">de manutenção e infraestrutura.</p>
+                            </div>
+                            
+                            <div class="flex flex-col items-center text-center p-4">
+                                <div class="bg-accent/10 p-4 rounded-full mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <h4 class="text-lg font-bold text-secondary-dark mb-2">Melhoria de performance</h4>
+                                <p class="text-secondary">e estabilidade dos sistemas.</p>
+                            </div>
+                            
+                            <div class="flex flex-col items-center text-center p-4">
+                                <div class="bg-accent/10 p-4 rounded-full mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                    </svg>
+                                </div>
+                                <h4 class="text-lg font-bold text-secondary-dark mb-2">Aumento da segurança</h4>
+                                <p class="text-secondary">e conformidade regulatória.</p>
+                            </div>
+                            
+                            <div class="flex flex-col items-center text-center p-4">
+                                <div class="bg-accent/10 p-4 rounded-full mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                    </svg>
+                                </div>
+                                <h4 class="text-lg font-bold text-secondary-dark mb-2">Aceleração digital</h4>
+                                <p class="text-secondary">e competitividade.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="section bg-light">
+            <div class="container mx-auto px-4">
+                <div class="section-heading" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-secondary-dark mb-4">Agende Sua Reunião</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-8"></div>
+                </div>
+                
+                <div class="max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-lg mb-10">
+                        <strong>Pronto para transformar seus sistemas e impulsionar seu negócio?</strong><br>
+                        Preencha o formulário abaixo e um de nossos consultores entrará em contato para agendar uma reunião.
+                    </p>
+                    
+                    <div id="formContent" class="bg-white rounded-lg shadow-md p-8">
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-secondary text-left mb-1">Nome*</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-secondary text-left mb-1">Email*</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-secondary text-left mb-1">Mensagem (opcional)</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-accent w-full">Agendar Reunião</button>
+                        </form>
+                    </div>
+                    
+                    <div id="formSuccess" class="hidden bg-white rounded-lg shadow-md p-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-green-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <h3 class="text-2xl font-bold text-secondary-dark mb-2">Agradecemos seu contato!</h3>
+                        <p class="text-lg text-secondary mb-4">
+                            Sua mensagem foi enviada com sucesso. Um de nossos consultores entrará em contato em breve para agendar sua reunião.
+                        </p>
+                        <button onclick="document.getElementById('formSuccess').classList.add('hidden'); document.getElementById('formContent').classList.remove('hidden');" class="btn-outlined">Enviar Novo Contato</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold">
+                        <span class="flex items-center">
+                            <!-- Placeholder for logo -->
+                            <span class="text-white mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </span>
+                            Vector<span class="text-accent font-light">Insight</span>
+                        </span>
+                    </a>
+                    <p class="mt-2 text-gray-400">
+                        Vector Insight © 2025. Todos os direitos reservados.
+                    </p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <span class="sr-only">Twitter</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between">
+                <nav class="flex flex-wrap justify-center md:justify-start gap-6 mb-4 md:mb-0">
+                    <a href="#sobre" class="text-gray-400 hover:text-white transition-colors">Sobre Nós</a>
+                    <a href="#servicos" class="text-gray-400 hover:text-white transition-colors">Serviços</a>
+                    <a href="#diferenciais" class="text-gray-400 hover:text-white transition-colors">Diferenciais</a>
+                    <a href="#contato" class="text-gray-400 hover:text-white transition-colors">Contato</a>
+                </nav>
+                
+                <div class="text-gray-400 text-sm text-center md:text-right">
+                    <a href="#" class="hover:text-white transition-colors">Política de Privacidade</a>
+                    <span class="mx-2">•</span>
+                    <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Structured Data Professional Services -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Vector Insight",
+      "image": "https://www.vectorinsight.io/assets/images/logo.svg",
+      "url": "https://www.vectorinsight.io",
+      "telephone": "+55-000-000-0000",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/vector-insight/",
+        "https://twitter.com/vectorinsight"
+      ]
+    }
+    </script>
+</body>
+</html>
