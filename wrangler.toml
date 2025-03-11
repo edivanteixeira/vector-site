@@ -4,3 +4,7 @@ compatibility_date = "2025-03-11"
 
 [site]
 bucket = "./"
+
+[observability]
+enabled = true
+head_sampling_rate = 1
